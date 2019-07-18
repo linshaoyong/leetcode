@@ -4,8 +4,6 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        if len(prices) < 2:
-            return 0
         return 0
 
 

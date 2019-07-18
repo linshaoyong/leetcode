@@ -6,13 +6,6 @@ class Solution(object):
         :type t: int
         :rtype: bool
         """
-        n = len(nums)
-        for i in range(0, n):
-            for j in range(1, k + 1):
-                if i + j > n - 1:
-                    break
-                if abs(nums[i + j] - nums[i]) <= t:
-                    return True
         return False
 
 
