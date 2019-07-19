@@ -7,11 +7,9 @@ class Solution(object):
         """
         m1, m2 = {}, {}
         for i in range(0, len(s)):
-            if s[i] in m1:
-                if m1[s[i]] != t[i]:
+            if s[i] in m1 and m1[s[i]] != t[i]:
                     return False
-            if t[i] in m2:
-                if m2[t[i]] != s[i]:
+            if t[i] in m2 and m2[t[i]] != s[i]:
                     return False
             m1[s[i]] = t[i]
             m2[t[i]] = s[i]
