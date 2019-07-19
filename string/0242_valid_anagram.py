@@ -12,7 +12,7 @@ class Solution(object):
             ds[x] = ds.get(x, 0) + 1
         for x in t:
             ts[x] = ts.get(x, 0) + 1
-        return cmp(ds, ts) == 0
+        return ds == ts
 
 
 def test_is_anagram():
