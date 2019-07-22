@@ -10,6 +10,7 @@ class Solution(object):
 
 def test_countAndSay():
     s = Solution()
+
     assert "1" == s.countAndSay(1)
     assert "11" == s.countAndSay(2)
     assert "21" == s.countAndSay(3)
