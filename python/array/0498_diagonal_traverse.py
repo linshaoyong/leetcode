@@ -11,6 +11,7 @@ class Solution(object):
             pass
         return s
 
+
 def test_find_diagonal_order():
     s = Solution()
     assert [1, 2, 4, 7, 5, 3, 6, 8, 9] == s.findDiagonalOrder([
