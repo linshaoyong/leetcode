@@ -4,13 +4,16 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        a = 0
-        for i in nums:
-            a ^= i
-        return a
+        d = {}
+        for x in nums:
+            d[x] = d.get(x, 0) + 1
+
+        return [k for k, v in d.items() if v == 1]
 
 
 def test_single_number():
     s = Solution()
-    assert s.singleNumber([2, 2, 1]) == 1
-    assert s.singleNumber([4, 1, 2, 1, 2]) == 4
+    r = s.singleNumber([1, 2, 1, 3, 2, 5])
+    assert len(r) == 2
+    assert 3 in r
+    assert 5 in r
