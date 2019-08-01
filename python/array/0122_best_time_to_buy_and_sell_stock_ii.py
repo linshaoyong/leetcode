@@ -4,22 +4,16 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        if len(prices) < 2:
+        length = len(prices)
+        if length <= 1:
             return 0
-        m = 0
-        min_v, max_v = prices[0], prices[0]
-        for i in range(1, len(prices)):
-            if prices[i] < prices[i - 1]:
-                if max_v - min_v > 0:
-                    m += max_v - min_v
-                min_v = prices[i]
-                max_v = 0
-                continue
-            if prices[i] > max_v:
-                max_v = prices[i]
-        if max_v - min_v > 0:
-            m += max_v - min_v
-        return m
+        v = 0
+        prev = prices[0]
+        for num in prices[1:]:
+            if num > prev:
+                v += num - prev
+            prev = num
+        return v
 
 
 def test_max_profit():
