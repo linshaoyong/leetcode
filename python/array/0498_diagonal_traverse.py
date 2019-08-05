@@ -4,12 +4,29 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
-        up = True
-        n = len(matrix) * len(matrix[0])
-        s = []
-        for i in range(0, n):
-            pass
-        return s
+        if len(matrix) == 0:
+            return []
+        r, c, m, n = 0, 0, len(matrix), len(matrix[0])
+        arr = []
+        for _ in range(m * n):
+            arr.append(matrix[r][c])
+            if (r + c) % 2 == 0:  # moving up
+                if (c == n - 1):
+                    r += 1
+                elif r == 0:
+                    c += 1
+                else:
+                    r -= 1
+                    c += 1
+            else:                 # moving down
+                if r == m - 1:
+                    c += 1
+                elif c == 0:
+                    r += 1
+                else:
+                    r += 1
+                    c -= 1
+        return arr
 
 
 def test_find_diagonal_order():
