@@ -24,7 +24,7 @@ class Solution:
         return head
 
 
-def test_0():
+def test_odd_even_list_1():
     a = ListNode(1)
     b = ListNode(2)
     c = ListNode(3)
@@ -43,7 +43,7 @@ def test_0():
     assert r.next.next.next.next.val == 4
 
 
-def test_1():
+def test_odd_even_list_2():
     a = ListNode(2)
     b = ListNode(1)
     c = ListNode(3)
