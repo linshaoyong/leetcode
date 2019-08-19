@@ -5,10 +5,10 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         m = {}
-        for i in range(0, len(strs)):
-            sv = tuple(sorted(strs[i]))
+        for v in strs:
+            sv = tuple(sorted(v))
             r = m.get(sv, [])
-            r.append(strs[i])
+            r.append(v)
             m[sv] = r
         return list(m.values())
 
