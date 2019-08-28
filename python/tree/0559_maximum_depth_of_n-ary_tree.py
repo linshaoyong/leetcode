@@ -15,17 +15,14 @@ class Solution(object):
             return 0
         a = [root]
         b = []
-        depth = 1
-        while True:
+        depth = 0
+        while a:
             for n in a:
                 if n.children:
                     b.extend(n.children)
-            if not b:
-                break
-            else:
-                a = b
-                b = []
-                depth += 1
+            a = b
+            b = []
+            depth += 1
         return depth
 
 

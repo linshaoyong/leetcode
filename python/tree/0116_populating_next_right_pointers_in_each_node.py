@@ -106,3 +106,5 @@ def test_connect_2():
     assert a.right.left.right.next.val == 14
     assert a.right.right.left.next.val == 15
     assert a.right.right.right.next is None
+
+    assert False

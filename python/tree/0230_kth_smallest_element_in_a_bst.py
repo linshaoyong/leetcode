@@ -15,7 +15,7 @@ class Solution:
         a = [root]
         b = []
         c = [root.val]
-        while True:
+        while a:
             for n in a:
                 if n.left:
                     b.append(n.left)
@@ -23,11 +23,8 @@ class Solution:
                 if n.right:
                     b.append(n.right)
                     c.append(n.right.val)
-            if not b:
-                break
-            else:
-                a = b
-                b = []
+            a = b
+            b = []
         return sorted(c)[k - 1]
 
 

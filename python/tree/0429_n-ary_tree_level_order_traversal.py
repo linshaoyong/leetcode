@@ -16,16 +16,13 @@ class Solution(object):
         a = [root]
         b = []
         r = []
-        while True:
+        while a:
             v = []
             for n in a:
                 v.append(n.val)
                 for c in n.children:
                     b.append(c)
-            if a:
-                r.append(v)
-            if not b:
-                break
+            r.append(v)
             a = b
             b = []
         return r
