@@ -16,7 +16,7 @@ class Solution(object):
             return 0
         a = [root]
         b = []
-        d = 0
+        d = 1
         while True:
             for n in a:
                 if n.left:
@@ -29,7 +29,7 @@ class Solution(object):
                 d += 1
                 a = b
                 b = []
-        return d + 1
+        return d
 
 
 def test_max_depth():
