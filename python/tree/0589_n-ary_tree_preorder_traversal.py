@@ -19,8 +19,6 @@ class Solution:
 
 
 def test_preorder():
-    s = Solution()
-
     a = Node(1, [])
     b = Node(3, [])
     c = Node(2, [])
@@ -33,4 +31,4 @@ def test_preorder():
     b.children.append(e)
     b.children.append(f)
 
-    assert [1, 3, 5, 6, 2, 4] == s.preorder(a)
+    assert [1, 3, 5, 6, 2, 4] == Solution().preorder(a)
