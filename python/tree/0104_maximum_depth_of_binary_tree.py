@@ -16,19 +16,16 @@ class Solution(object):
             return 0
         a = [root]
         b = []
-        d = 1
-        while True:
+        d = 0
+        while a:
             for n in a:
                 if n.left:
                     b.append(n.left)
                 if n.right:
                     b.append(n.right)
-            if not b:
-                break
-            else:
-                d += 1
-                a = b
-                b = []
+            d += 1
+            a = b
+            b = []
         return d
 
 

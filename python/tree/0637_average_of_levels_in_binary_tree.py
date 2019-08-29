@@ -17,7 +17,7 @@ class Solution(object):
         a = [root]
         b = []
         r = []
-        while True:
+        while a:
             s, c = 0, 0
             for n in a:
                 s += n.val
@@ -26,10 +26,7 @@ class Solution(object):
                     b.append(n.left)
                 if n.right:
                     b.append(n.right)
-            if a:
-                r.append(float(s) / c)
-            if not b:
-                break
+            r.append(float(s) / c)
             a = b
             b = []
         return r

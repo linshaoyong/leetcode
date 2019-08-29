@@ -12,6 +12,26 @@ class Solution(object):
         :type t: TreeNode
         :rtype: str
         """
+        if not t:
+            return ""
+        res = [str(t.val)]
+        if t.left is None and t.right:
+            res[0] += '()'
+        self.traversal(t.left, res)
+        self.traversal(t.right, res)
+        return res[0]
+
+    def traversal(self, node, res):
+        if node:
+            res[0] += '(' + str(node.val)
+            if node.left:
+                self.traversal(node.left, res)
+            else:
+                if node.right:
+                    res[0] += '()'
+            if node.right:
+                self.traversal(node.right, res)
+            res[0] += ')'
 
 
 def test_tree2str():
@@ -33,3 +53,16 @@ def test_tree2str():
     a.right = c
     b.right = d
     assert "1(2()(4))(3)" == Solution().tree2str(a)
+
+    a = TreeNode(1)
+    b = TreeNode(2)
+    c = TreeNode(3)
+    d = TreeNode(4)
+    e = TreeNode(5)
+    f = TreeNode(6)
+    a.right = b
+    b.right = c
+    c.right = d
+    d.right = e
+    e.right = f
+    assert "1()(2()(3()(4()(5()(6)))))" == Solution().tree2str(a)

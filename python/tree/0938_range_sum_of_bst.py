@@ -16,7 +16,7 @@ class Solution(object):
         a = [root]
         b = []
         c = 0
-        while True:
+        while a:
             for n in a:
                 if n.val >= L and n.val <= R:
                     c += n.val
@@ -24,11 +24,8 @@ class Solution(object):
                     b.append(n.left)
                 if n.right:
                     b.append(n.right)
-            if not b:
-                break
-            else:
-                a = b
-                b = []
+            a = b
+            b = []
         return c
 
 

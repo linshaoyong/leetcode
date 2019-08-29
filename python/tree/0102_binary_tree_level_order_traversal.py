@@ -16,9 +16,9 @@ class Solution:
             return []
         a = [root]
         b = []
-        c = []
         r = [[root.val]]
-        while True:
+        while a:
+            c = []
             for n in a:
                 if n.left:
                     b.append(n.left)
@@ -26,13 +26,10 @@ class Solution:
                 if n.right:
                     b.append(n.right)
                     c.append(n.right.val)
-            if not b:
-                break
-            else:
-                a = b
+            if c:
                 r.append(c)
-                b = []
-                c = []
+            a = b
+            b = []
         return r
 
 
