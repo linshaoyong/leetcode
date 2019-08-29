@@ -14,25 +14,37 @@ class Solution(object):
         """
         if not root:
             return True
+        nodes = [root]
+        while nodes:
+            node = nodes.pop()
+            if abs(self.maxDepth(node.left) - self.maxDepth(node.right)) > 1:
+                return False
+            if node.left:
+                nodes.append(node.left)
+            if node.right:
+                nodes.append(node.right)
+        return True
+
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if not root:
+            return 0
         a = [root]
-        level = 0
-        min_level = 0
+        b = []
+        d = 0
         while a:
-            level += 1
-            b = []
             for n in a:
-                if n.left is None or n.right is None:
-                    if min_level == 0:
-                        min_level = level
-                    if level - min_level > 1:
-                        return False
                 if n.left:
                     b.append(n.left)
                 if n.right:
                     b.append(n.right)
+            d += 1
             a = b
             b = []
-        return True
+        return d
 
 
 def test_is_balanced():
