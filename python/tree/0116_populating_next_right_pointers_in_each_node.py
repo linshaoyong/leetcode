@@ -8,24 +8,22 @@ class TreeLinkNode:
 
 class Solution:
     # @param root, a tree link node
-    # @return nothing
+    # @return root
     def connect(self, root):
         if root:
             a = [root]
             b = []
-            while True:
+            while a:
                 for n in a:
                     if n.left:
                         b.append(n.left)
                     if n.right:
                         b.append(n.right)
-                if not b:
-                    break
-                else:
-                    a = b
-                    b = []
-                    for i in range(0, len(a) - 1):
-                        a[i].next = a[i + 1]
+                a = b
+                b = []
+                for i in range(0, len(a) - 1):
+                    a[i].next = a[i + 1]
+        return root
 
 
 def test_connect_1():
@@ -44,7 +42,7 @@ def test_connect_1():
     c.left = f
     c.right = g
 
-    Solution().connect(a)
+    a = Solution().connect(a)
     assert a.next is None
     assert a.left.next.val == 3
     assert a.right.next is None
@@ -88,7 +86,7 @@ def test_connect_2():
     g.left = n
     g.right = o
 
-    Solution().connect(a)
+    a = Solution().connect(a)
     assert a.next is None
     assert a.left.next.val == 3
     assert a.right.next is None
@@ -106,5 +104,3 @@ def test_connect_2():
     assert a.right.left.right.next.val == 14
     assert a.right.right.left.next.val == 15
     assert a.right.right.right.next is None
-
-    assert False
