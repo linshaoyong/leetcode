@@ -14,19 +14,16 @@ class Solution(object):
         """
         if not root:
             return []
-        a = [(root, False,)]
+        a = [(root)]
         leftv = root.val
         while a:
             b = []
-            first = True
-            for n, is_left in a:
-                if first and is_left:
-                    leftv = n.val
-                    first = False
+            leftv = a[0].val
+            for n in a:
                 if n.left:
-                    b.append((n.left, True,))
+                    b.append(n.left)
                 if n.right:
-                    b.append((n.right, False,))
+                    b.append(n.right)
             a = b
             b = []
         return leftv
