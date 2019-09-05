@@ -12,30 +12,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        if not root:
-            return 0
-        stack = [root]
-        maxp = 0
-        while stack:
-            node = stack.pop()
-            maxp = max(maxp, self.univaluePath(node))
-            if node.left:
-                stack.append(node.left)
-            if node.right:
-                stack.append(node.right)
-        return maxp
+        self.longest = 0
 
-    def univaluePath(self, node):
-        p = 0
-        q = 0
-        if node:
-            if node.left:
-                if node.val == node.left.val:
-                    p += 1 + self.univaluePath(node.left)
-            if node.right:
-                if node.val == node.right.val:
-                    q += 1 + self.univaluePath(node.right)
-        return max(p, q)
+        def traverse(node, parent_val):
+            if not node:
+                return 0
+            left, right = traverse(node.left, node.val), traverse(
+                node.right, node.val)
+            self.longest = max(self.longest, left + right)
+            return 1 + max(left, right) if node.val == parent_val else 0
+        traverse(root, None)
+        return self.longest
 
 
 def test_longest_univalue_path():
