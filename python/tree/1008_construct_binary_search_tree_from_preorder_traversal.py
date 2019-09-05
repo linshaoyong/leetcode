@@ -12,6 +12,25 @@ class Solution(object):
         :type preorder: List[int]
         :rtype: TreeNode
         """
+        if not preorder:
+            return None
+
+        root = TreeNode(preorder[0])
+        for n in preorder[1:]:
+            self.insert(root, root, n)
+        return root
+
+    def insert(self, parent, node, n):
+        if node is None:
+            if n < parent.val:
+                parent.left = TreeNode(n)
+            else:
+                parent.right = TreeNode(n)
+            return
+        if n < node.val:
+            self.insert(node, node.left, n)
+        else:
+            self.insert(node, node.right, n)
 
 
 def test_bst_from_preorder():
