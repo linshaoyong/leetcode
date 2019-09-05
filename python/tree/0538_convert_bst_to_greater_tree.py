@@ -15,18 +15,18 @@ class Solution(object):
         if not root:
             return root
         nodes = []
-        self.traversal(root, nodes)
+        self.traverse(root, nodes)
         addition = 0
         for i in range(len(nodes) - 1, -1, -1):
             nodes[i].val += addition
             addition = nodes[i].val
         return root
 
-    def traversal(self, node, nodes):
+    def traverse(self, node, nodes):
         if node:
-            self.traversal(node.left, nodes)
+            self.traverse(node.left, nodes)
             nodes.append(node)
-            self.traversal(node.right, nodes)
+            self.traverse(node.right, nodes)
 
 
 def test_convert_bst():

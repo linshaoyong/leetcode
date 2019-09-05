@@ -13,7 +13,7 @@ class Solution(object):
         :rtype: List[int]
         """
         m = {}
-        self.traversal(root, m)
+        self.traverse(root, m)
         res = []
         maxv = 0
         for k, v in sorted(m.items(), key=lambda kv: kv[1], reverse=True):
@@ -27,11 +27,11 @@ class Solution(object):
             break
         return res
 
-    def traversal(self, node, m):
+    def traverse(self, node, m):
         if node:
             m[node.val] = m.get(node.val, 0) + 1
-            self.traversal(node.left, m)
-            self.traversal(node.right, m)
+            self.traverse(node.left, m)
+            self.traverse(node.right, m)
         return m
 
 

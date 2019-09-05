@@ -14,10 +14,10 @@ class Solution(object):
         :rtype: bool
         """
         finded = [False]
-        self.traversal(root, set(), k, finded)
+        self.traverse(root, set(), k, finded)
         return finded[0]
 
-    def traversal(self, node, targets, k, finded):
+    def traverse(self, node, targets, k, finded):
         if finded[0]:
             return
         if node:
@@ -25,8 +25,8 @@ class Solution(object):
                 finded[0] = True
             else:
                 targets.add(k - node.val)
-                self.traversal(node.left, targets, k, finded)
-                self.traversal(node.right, targets, k, finded)
+                self.traverse(node.left, targets, k, finded)
+                self.traverse(node.right, targets, k, finded)
 
 
 def test_find_target():

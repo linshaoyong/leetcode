@@ -17,20 +17,20 @@ class Solution(object):
         res = [str(t.val)]
         if t.left is None and t.right:
             res[0] += '()'
-        self.traversal(t.left, res)
-        self.traversal(t.right, res)
+        self.traverse(t.left, res)
+        self.traverse(t.right, res)
         return res[0]
 
-    def traversal(self, node, res):
+    def traverse(self, node, res):
         if node:
             res[0] += '(' + str(node.val)
             if node.left:
-                self.traversal(node.left, res)
+                self.traverse(node.left, res)
             else:
                 if node.right:
                     res[0] += '()'
             if node.right:
-                self.traversal(node.right, res)
+                self.traverse(node.right, res)
             res[0] += ')'
 
 

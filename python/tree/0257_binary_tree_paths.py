@@ -13,18 +13,18 @@ class Solution(object):
         :rtype: List[str]
         """
         paths = []
-        self.traversal(root, [], paths)
+        self.traverse(root, [], paths)
         return paths
 
-    def traversal(self, node, res, paths):
+    def traverse(self, node, res, paths):
         if node:
             res.append(str(node.val))
             if node.left is None and node.right is None:
                 paths.append('->'.join(res))
                 res.pop()
                 return
-            self.traversal(node.left, res, paths)
-            self.traversal(node.right, res, paths)
+            self.traverse(node.left, res, paths)
+            self.traverse(node.right, res, paths)
             res.pop()
 
 

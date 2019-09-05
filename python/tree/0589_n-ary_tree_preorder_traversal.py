@@ -8,14 +8,14 @@ class Node:
 class Solution:
     def preorder(self, root):
         res = []
-        self.traversal(root, res)
+        self.traverse(root, res)
         return res
 
-    def traversal(self, node, res):
+    def traverse(self, node, res):
         if node:
             res.append(node.val)
             for child in node.children:
-                self.traversal(child, res)
+                self.traverse(child, res)
 
 
 def test_preorder():

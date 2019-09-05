@@ -15,7 +15,7 @@ class Solution(object):
         if not root:
             return None
         res = []
-        self.traversal(root, res)
+        self.traverse(root, res)
         if len(res) == 1:
             return abs(res[0])
         minv = abs(res[1].val - res[0].val)
@@ -25,11 +25,11 @@ class Solution(object):
             prev = n
         return minv
 
-    def traversal(self, node, res):
+    def traverse(self, node, res):
         if node:
-            self.traversal(node.left, res)
+            self.traverse(node.left, res)
             res.append(node)
-            self.traversal(node.right, res)
+            self.traverse(node.right, res)
 
 
 def test_get_mininum_difference():

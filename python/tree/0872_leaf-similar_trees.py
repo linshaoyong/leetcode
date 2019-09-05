@@ -14,16 +14,16 @@ class Solution(object):
         :rtype: bool
         """
         r1, r2 = [], []
-        self.traversal(root1, r1)
-        self.traversal(root2, r2)
+        self.traverse(root1, r1)
+        self.traverse(root2, r2)
         return r1 == r2
 
-    def traversal(self, node, res):
+    def traverse(self, node, res):
         if node:
             if node.left is None and node.right is None:
                 res.append(node.val)
-            self.traversal(node.left, res)
-            self.traversal(node.right, res)
+            self.traverse(node.left, res)
+            self.traverse(node.right, res)
 
 
 def test_leaf_similar():

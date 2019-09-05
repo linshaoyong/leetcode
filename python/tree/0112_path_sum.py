@@ -14,10 +14,10 @@ class Solution(object):
         :rtype: bool
         """
         find = [False]
-        self.traversal(root, [], summ, find)
+        self.traverse(root, [], summ, find)
         return find[0]
 
-    def traversal(self, node, path, summ, find):
+    def traverse(self, node, path, summ, find):
         if find[0]:
             return
         if node:
@@ -27,8 +27,8 @@ class Solution(object):
                     find[0] = True
                 path.pop()
                 return
-            self.traversal(node.left, path, summ, find)
-            self.traversal(node.right, path, summ, find)
+            self.traverse(node.left, path, summ, find)
+            self.traverse(node.right, path, summ, find)
             path.pop()
 
 

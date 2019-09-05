@@ -15,7 +15,7 @@ class Solution(object):
         if not root:
             return None
         res = []
-        self.traversal(root, res)
+        self.traverse(root, res)
         prev = res[0]
         prev.left = None
         for n in res[1:]:
@@ -24,11 +24,11 @@ class Solution(object):
             prev = n
         return res[0]
 
-    def traversal(self, node, res):
+    def traverse(self, node, res):
         if node:
-            self.traversal(node.left, res)
+            self.traverse(node.left, res)
             res.append(node)
-            self.traversal(node.right, res)
+            self.traverse(node.right, res)
 
 
 def test_increasing_bst():

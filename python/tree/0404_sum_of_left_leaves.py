@@ -13,15 +13,15 @@ class Solution(object):
         :rtype: int
         """
         values = [0]
-        self.traversal(root, False, values)
+        self.traverse(root, False, values)
         return values[0]
 
-    def traversal(self, node, is_left, values):
+    def traverse(self, node, is_left, values):
         if node:
             if is_left and node.left is None and node.right is None:
                 values[0] = values[0] + node.val
-            self.traversal(node.left, True, values)
-            self.traversal(node.right, False, values)
+            self.traverse(node.left, True, values)
+            self.traverse(node.right, False, values)
 
 
 def test_sum_of_left_leaves():

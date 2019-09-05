@@ -13,18 +13,18 @@ class Solution(object):
         :rtype: int
         """
         values = [0]
-        self.traversal(root, [], values)
+        self.traverse(root, [], values)
         return values[0]
 
-    def traversal(self, node, res, values):
+    def traverse(self, node, res, values):
         if node:
             res.append(node.val)
             if node.left is None and node.right is None:
                 values[0] = values[0] + self.leafValue(res)
                 res.pop()
                 return
-            self.traversal(node.left, res, values)
-            self.traversal(node.right, res, values)
+            self.traverse(node.left, res, values)
+            self.traverse(node.right, res, values)
             res.pop()
 
     def leafValue(self, res):
