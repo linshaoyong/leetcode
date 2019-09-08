@@ -5,21 +5,14 @@ class Solution(object):
         :rtype: int
         """
         res = set()
-        self.traverse(tiles, 0, len(tiles), [], res)
-        print(sorted([i for i in list(res) if len(i) == 1]))
-        print(sorted([i for i in list(res) if len(i) == 2]))
-        print(sorted([i for i in list(res) if len(i) == 3]))
-        print(sorted([i for i in list(res) if len(i) == 4]))
-        print(sorted([i for i in list(res) if len(i) == 5]))
-        print(sorted([i for i in list(res) if len(i) == 6]))
+        self.traverse(tiles, [], res)
         return len(res)
 
-    def traverse(self, tiles, start, end, path, res):
-        for i in range(start, end):
+    def traverse(self, tiles, path, res):
+        for i in range(len(tiles)):
             path.append(tiles[i])
             res.add(''.join(path))
-            self.traverse(tiles, start, i, path, res)
-            self.traverse(tiles, i + 1, end, path, res)
+            self.traverse(tiles[:i] + tiles[i + 1:], path, res)
             path.pop()
 
 
