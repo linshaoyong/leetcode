@@ -6,6 +6,12 @@ class Solution(object):
         """
         res = set()
         self.traverse(tiles, 0, len(tiles), [], res)
+        print(sorted([i for i in list(res) if len(i) == 1]))
+        print(sorted([i for i in list(res) if len(i) == 2]))
+        print(sorted([i for i in list(res) if len(i) == 3]))
+        print(sorted([i for i in list(res) if len(i) == 4]))
+        print(sorted([i for i in list(res) if len(i) == 5]))
+        print(sorted([i for i in list(res) if len(i) == 6]))
         return len(res)
 
     def traverse(self, tiles, start, end, path, res):
