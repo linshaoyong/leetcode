@@ -14,15 +14,9 @@ class Solution(object):
 
         v = 0
         for n, c in hnums.items():
-            if k == 0:
-                if c > 1:
-                    v += 1
-            else:
-                if n - k in hnums:
-                    v += 1
-                if n + k in hnums:
-                    v += 1
-        return v if k == 0 else v // 2
+            if (k == 0 and c > 1) or (k > 0 and n + k in hnums):
+                v += 1
+        return v
 
 
 def test_find_pairs():
