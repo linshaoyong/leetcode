@@ -4,6 +4,21 @@ class Solution(object):
         :type ops: List[str]
         :rtype: int
         """
+        stack = []
+        for op in ops:
+            if op == 'C':
+                stack.pop()
+                continue
+            if op == 'D':
+                v = stack[-1] * 2
+                stack.append(v)
+                continue
+            if op == '+':
+                v = stack[-1] + stack[-2]
+                stack.append(v)
+                continue
+            stack.append(int(op))
+        return sum(stack)
 
 
 def test_cal_points():
