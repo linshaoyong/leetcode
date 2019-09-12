@@ -4,14 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        for i in range(len(nums) - 1, -1, -1):
-            v = nums[i]
-            right = False
-            for j in range(i, -1, -1):
-                if not right and nums[j] > v:
-                    right = True
-                if right and nums[j] < v:
-                    return True
         return False
 
 
