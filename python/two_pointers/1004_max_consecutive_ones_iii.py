@@ -8,16 +8,16 @@ class Solution(object):
         :type K: int
         :rtype: int
         """
-        start, res, k = 0, 0, K
+        start, res = 0, 0
         zeros = deque()
         for i in range(len(A)):
             if A[i] == 0:
                 zeros.append(i)
-                if k == 0:
+                if K == 0:
                     res = max(res, i - start)
                     start = zeros.popleft() + 1
                 else:
-                    k -= 1
+                    K -= 1
         res = max(res, len(A) - start)
         return res
 
