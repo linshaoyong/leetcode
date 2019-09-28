@@ -9,7 +9,7 @@ class Solution(object):
         """
         m = area
         res = [area, 1]
-        for i in range(2, int(math.sqrt(area)) + 1):
+        for i in range(1, int(math.sqrt(area)) + 1):
             if area % i == 0:
                 weight = i
                 length = area // weight
