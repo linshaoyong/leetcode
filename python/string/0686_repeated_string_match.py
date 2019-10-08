@@ -5,8 +5,17 @@ class Solution(object):
         :type B: str
         :rtype: int
         """
-        res = -1
-        return res
+        n = 1
+        ar = A * n
+        while len(ar) < len(B):
+            n += 1
+            ar = A * n
+        if B not in ar:
+            n += 1
+            ar = A * n
+        if B in ar:
+            return n
+        return -1
 
 
 def test_repeated_string_match():
