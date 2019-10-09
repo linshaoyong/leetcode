@@ -4,9 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        maxv, minv = max(nums), min(nums)
-        if len(nums) < 3 or maxv == minv:
-            return maxv - minv
+        return sum(nums) - min(nums) * len(nums)
 
 
 def test_min_moves():
