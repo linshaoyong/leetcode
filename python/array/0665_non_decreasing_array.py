@@ -7,6 +7,11 @@ class Solution(object):
         if len(nums) < 3:
             return True
 
+        c = 0
+        for i in range(1, len(nums)):
+            if nums[i] < nums[i - 1]:
+                c += 1
+
 
 def test_check_possibility():
     s = Solution()
