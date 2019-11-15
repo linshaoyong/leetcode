@@ -6,11 +6,7 @@ class Solution(object):
         :type indices: List[List[int]]
         :rtype: int
         """
-        matrix = []
-        for i in range(n):
-            matrix.append([])
-            for j in range(m):
-                matrix[i].append(0)
+        matrix = [[0 for i in range(m)] for j in range(n)]
 
         for indice in indices:
             r, c = indice[0], indice[1]
