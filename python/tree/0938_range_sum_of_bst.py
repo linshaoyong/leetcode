@@ -14,9 +14,9 @@ class Solution(object):
         :rtype: int
         """
         a = [root]
-        b = []
         c = 0
         while a:
+            b = []
             for n in a:
                 if n.val >= L and n.val <= R:
                     c += n.val
@@ -25,7 +25,6 @@ class Solution(object):
                 if n.right:
                     b.append(n.right)
             a = b
-            b = []
         return c
 
 
