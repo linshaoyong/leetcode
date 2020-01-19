@@ -4,14 +4,10 @@ class Solution(object):
         :type stones: List[int]
         :rtype: int
         """
-        if not stones:
-            return 0
-        if len(stones) == 1:
-            return stones[0]
-        stones.sort()
-        ns = stones[:-2]
-        ns.append(stones[-1] - stones[-2])
-        return self.lastStoneWeightII(ns)
+        dp = {0}
+        for stone in stones:
+            dp = {stone + x for x in dp} | {abs(stone - x) for x in dp}
+        return min(dp)
 
 
 def test_last_stone_weight_ii():
