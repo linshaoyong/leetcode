@@ -4,13 +4,13 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        dp = [0] * (len(cost))
-        dp[0], dp[1] = cost[0], cost[1]
+        a, b = cost[0], cost[1]
 
         for i in range(2, len(cost)):
-            dp[i] = min(dp[i - 2] + cost[i], dp[i - 1] + cost[i])
+            c = min(a, b) + cost[i]
+            a, b = b, c
 
-        return min(dp[-2], dp[-1])
+        return min(a, b)
 
 
 def test_min_cost_climbing_stairs():
