@@ -5,6 +5,16 @@ class Solution(object):
         :type fee: int
         :rtype: int
         """
+        profits, start = [], prices[0]
+        for i in range(1, len(prices) + 1):
+            current = 0 if i == len(prices) else prices[i]
+            if current < prices[i - 1]:
+                if prices[i - 1] > start:
+                    profits.append([start, prices[i - 1]])
+                start = current
+
+        res = 0
+        return res
 
 
 def test_max_profit():
