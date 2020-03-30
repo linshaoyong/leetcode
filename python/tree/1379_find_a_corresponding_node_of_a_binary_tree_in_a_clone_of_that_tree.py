@@ -27,10 +27,8 @@ class Solution(object):
             if node == target:
                 self.res = nodec
                 return
-            if node.left:
-                self.traverse(node.left, nodec.left, target)
-            if node.right:
-                self.traverse(node.right, nodec.right, target)
+            self.traverse(node.left, nodec.left, target)
+            self.traverse(node.right, nodec.right, target)
 
 
 def test_get_target_copy_1():
