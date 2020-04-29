@@ -5,6 +5,7 @@ class MinStack:
         initialize your data structure here.
         """
         self.stack = []
+        self.minv = float('inf')
 
     def push(self, x):
         """
@@ -12,12 +13,19 @@ class MinStack:
         :rtype: void
         """
         self.stack.append(x)
+        self.minv = min(self.minv, x)
 
     def pop(self):
         """
         :rtype: void
         """
+        v = self.stack[-1]
         self.stack = self.stack[:-1]
+        if self.stack:
+            if v == self.minv:
+                self.minv = min(self.stack)
+        else:
+            self.minv = float('inf')
 
     def top(self):
         """
@@ -29,7 +37,7 @@ class MinStack:
         """
         :rtype: int
         """
-        return min(self.stack)
+        return self.minv
 
 
 def test_min_stack():
