@@ -13,19 +13,19 @@ class Solution:
         :type k: int
         :rtype: int
         """
-        self.c = 0
-        self.res = 0
-        self.find(root, k, False)
+        self.res, self.c, self.found = 0, 0, False
+        self.find(root, k)
         return self.res
 
-    def find(self, node, k, found):
-        if not found and node:
-            self.find(node.left, k, found)
+    def find(self, node, k):
+        if not self.found and node:
+            self.find(node.left, k)
 
             self.c += 1
             if self.c == k:
                 self.res = node.val
-            self.find(node.right, k, found)
+                self.found = True
+            self.find(node.right, k)
 
 
 def test_0():
