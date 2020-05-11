@@ -6,26 +6,26 @@ class TreeNode:
 
 
 class Solution:
+
     def kthSmallest(self, root, k):
         """
         :type root: TreeNode
         :type k: int
         :rtype: int
         """
-        a = [root]
-        b = []
-        c = [root.val]
-        while a:
-            for n in a:
-                if n.left:
-                    b.append(n.left)
-                    c.append(n.left.val)
-                if n.right:
-                    b.append(n.right)
-                    c.append(n.right.val)
-            a = b
-            b = []
-        return sorted(c)[k - 1]
+        self.c = 0
+        self.res = 0
+        self.find(root, k, False)
+        return self.res
+
+    def find(self, node, k, found):
+        if not found and node:
+            self.find(node.left, k, found)
+
+            self.c += 1
+            if self.c == k:
+                self.res = node.val
+            self.find(node.right, k, found)
 
 
 def test_0():
@@ -38,7 +38,7 @@ def test_0():
     a.right = c
     b.right = d
 
-    assert Solution().kthSmallest(a, 1) == 1
-    assert Solution().kthSmallest(a, 2) == 2
-    assert Solution().kthSmallest(a, 3) == 3
-    assert Solution().kthSmallest(a, 4) == 4
+    assert 1 == Solution().kthSmallest(a, 1)
+    assert 2 == Solution().kthSmallest(a, 2)
+    assert 3 == Solution().kthSmallest(a, 3)
+    assert 4 == Solution().kthSmallest(a, 4)
