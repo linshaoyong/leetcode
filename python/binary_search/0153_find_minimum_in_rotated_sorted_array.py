@@ -4,6 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        res, prev = nums[0], nums[0]
+        for n in nums:
+            if n < prev:
+                return n
+            prev = n
+        return res
 
 
 def test_find_min():
