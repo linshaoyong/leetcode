@@ -5,6 +5,14 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
+        sa = set(arr)
+        max_v = max(len(arr) + k, arr[-1] + k)
+        m = 0
+        for i in range(1, max_v + 1):
+            if i not in sa:
+                m += 1
+            if m == k:
+                return i
 
 
 def test_find_kth_positive():
