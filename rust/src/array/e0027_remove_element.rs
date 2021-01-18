@@ -2,8 +2,7 @@ struct Solution;
 
 impl Solution {
 
-    // 27. Remove Element
-    pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
+    fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
         if nums.len() == 0 {
             return 0;
         }
