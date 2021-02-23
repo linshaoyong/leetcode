@@ -1,1 +1,2 @@
 mod e0027_remove_element;
+mod e1672_richest_customer_wealth;
