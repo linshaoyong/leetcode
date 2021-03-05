@@ -1,2 +1,2 @@
 #![allow(unused)]
-mod array;
+mod easy;
