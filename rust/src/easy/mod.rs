@@ -1,5 +1,6 @@
 mod e0027_remove_element;
 mod e1672_richest_customer_wealth;
+mod e1678_goal_parser_interpretation;
 mod e1684_count_the_number_of_consistent_strings;
 mod e1688_count_of_matches_in_tournament;
 mod e1732_find_the_highest_altitude;
