@@ -1,9 +1,11 @@
 mod e0027_remove_element;
+mod e0228_summary_ranges;
 mod e1614_maximum_nesting_depth_of_the_parentheses;
 mod e1672_richest_customer_wealth;
 mod e1678_goal_parser_interpretation;
 mod e1684_count_the_number_of_consistent_strings;
 mod e1688_count_of_matches_in_tournament;
+mod e1710_maximum_units_on_a_truck;
 mod e1732_find_the_highest_altitude;
 mod e1768_merge_strings_alternately;
 mod e1773_count_items_matching_a_rule;
