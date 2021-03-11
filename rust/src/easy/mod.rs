@@ -1,5 +1,6 @@
 mod e0027_remove_element;
 mod e0228_summary_ranges;
+mod e1437_check_if_all_1s_are_at_least_length_k_places_away;
 mod e1614_maximum_nesting_depth_of_the_parentheses;
 mod e1672_richest_customer_wealth;
 mod e1678_goal_parser_interpretation;
