@@ -7,6 +7,7 @@ mod e1678_goal_parser_interpretation;
 mod e1684_count_the_number_of_consistent_strings;
 mod e1688_count_of_matches_in_tournament;
 mod e1710_maximum_units_on_a_truck;
+mod e1725_number_of_rectangles_that_can_form_the_largest_square;
 mod e1732_find_the_highest_altitude;
 mod e1768_merge_strings_alternately;
 mod e1773_count_items_matching_a_rule;
