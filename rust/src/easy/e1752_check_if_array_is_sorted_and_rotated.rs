@@ -2,6 +2,18 @@ struct Solution;
 
 impl Solution {
     pub fn check(nums: Vec<i32>) -> bool {
+        let mut down = 0;
+        for i in 1..nums.len() {
+            if nums[i] < nums[i - 1] {
+                down += 1;
+                if down > 1 {
+                    return false;
+                }
+            }
+        }
+        if down == 1 && nums[nums.len() - 1] > nums[0] {
+            return false;
+        }
         true
     }
 }
