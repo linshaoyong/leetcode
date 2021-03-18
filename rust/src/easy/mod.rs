@@ -3,6 +3,7 @@ mod e0228_summary_ranges;
 mod e1437_check_if_all_1s_are_at_least_length_k_places_away;
 mod e1582_special_positions_in_a_binary_matrix;
 mod e1598_crawler_log_folder;
+mod e1608_special_array_with_x_lements_greater_than_or_equal_x;
 mod e1614_maximum_nesting_depth_of_the_parentheses;
 mod e1619_mean_of_array_after_removing_some_elements;
 mod e1624_largest_substring_between_two_equal_characters;
