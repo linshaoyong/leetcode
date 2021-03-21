@@ -29,3 +29,4 @@ mod e1763_longest_nice_substring;
 mod e1768_merge_strings_alternately;
 mod e1773_count_items_matching_a_rule;
 mod e1784_check_if_binary_string_has_at_most_one_segment_of_ones;
+mod e1800_maximum_ascending_subarray_sum;
