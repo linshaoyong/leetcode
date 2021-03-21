@@ -17,6 +17,7 @@ mod e1678_goal_parser_interpretation;
 mod e1684_count_the_number_of_consistent_strings;
 mod e1688_count_of_matches_in_tournament;
 mod e1694_reformat_phone_number;
+mod e1700_number_of_students_unable_to_eat_lunch;
 mod e1710_maximum_units_on_a_truck;
 mod e1720_decode_xored_array;
 mod e1725_number_of_rectangles_that_can_form_the_largest_square;
