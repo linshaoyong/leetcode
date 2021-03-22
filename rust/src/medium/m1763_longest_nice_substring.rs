@@ -7,23 +7,27 @@ impl Solution {
     pub fn longest_nice_substring(s: String) -> String {
         let sbs = s.as_bytes();
         let mut bytes: HashSet<u8> = HashSet::from_iter(sbs.iter().cloned());
-        for i in 0..sbs.len() {
-            bytes.insert(sbs[i]);
+        if sbs.len() < 2 {
+            return "".to_string();
         }
 
-        let mut not_nice_indexs: Vec<i32> = vec![];
-        for i in 0..sbs.len() {
-            if sbs[i] < 97 {}
-            let nice_char = if sbs[i] < 97 {
-                sbs[i] + 32
-            } else {
-                sbs[i] - 32
-            };
-            if !bytes.contains(&nice_char) {
-                not_nice_indexs.push(i as i32);
+        for (i, b) in sbs.iter().enumerate() {
+            let opp = if *b < 97 { *b + 32 } else { *b - 32 };
+            if !bytes.contains(&opp) {
+                let s0 = Solution::longest_nice_substring(
+                    String::from_utf8_lossy(&sbs[0..i]).to_string(),
+                );
+                let s1 = Solution::longest_nice_substring(
+                    String::from_utf8_lossy(&sbs[i + 1..]).to_string(),
+                );
+                if s0.len() >= s1.len() {
+                    return s0;
+                } else {
+                    return s1;
+                }
             }
         }
-        "".to_string()
+        s
     }
 }
 
