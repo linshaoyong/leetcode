@@ -1,1 +1,2 @@
 mod h1588_sum_of_all_odd_length_subarrays;
+mod h1763_longest_nice_substring;

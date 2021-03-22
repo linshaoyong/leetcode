@@ -25,7 +25,6 @@ mod e1732_find_the_highest_altitude;
 mod e1742_maximum_number_of_balls_in_a_box;
 mod e1748_sum_of_unique_elements;
 mod e1752_check_if_array_is_sorted_and_rotated;
-mod e1763_longest_nice_substring;
 mod e1768_merge_strings_alternately;
 mod e1773_count_items_matching_a_rule;
 mod e1784_check_if_binary_string_has_at_most_one_segment_of_ones;
