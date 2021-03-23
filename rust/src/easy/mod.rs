@@ -8,6 +8,7 @@ mod e1582_special_positions_in_a_binary_matrix;
 mod e1592_rearrange_spaces_between_words;
 mod e1598_crawler_log_folder;
 
+mod e1603_design_parking_system;
 mod e1608_special_array_with_x_lements_greater_than_or_equal_x;
 mod e1614_maximum_nesting_depth_of_the_parentheses;
 mod e1619_mean_of_array_after_removing_some_elements;
