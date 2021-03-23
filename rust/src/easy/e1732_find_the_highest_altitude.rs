@@ -4,7 +4,7 @@ impl Solution {
     pub fn largest_altitude(gain: Vec<i32>) -> i32 {
         let mut res = 0;
         let mut cur = 0;
-        for v in gain.iter() {
+        for v in gain {
             cur += v;
             res = core::cmp::max(res, cur);
         }
