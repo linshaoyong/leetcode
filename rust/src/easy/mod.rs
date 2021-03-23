@@ -32,6 +32,7 @@ mod e1736_latest_time_by_replacing_hidden_digits;
 mod e1742_maximum_number_of_balls_in_a_box;
 mod e1748_sum_of_unique_elements;
 mod e1752_check_if_array_is_sorted_and_rotated;
+mod e1758_minimum_changes_to_make_alternating_binary_string;
 mod e1768_merge_strings_alternately;
 mod e1773_count_items_matching_a_rule;
 mod e1779_find_nearest_point_that_has_the_same_x_or_y_coordinate;
