@@ -4,6 +4,8 @@ mod e0228_summary_ranges;
 
 mod e1437_check_if_all_1s_are_at_least_length_k_places_away;
 
+mod e1566_detect_pattern_of_length_m_repeated_k_or_more_times;
+mod e1576_replace_all_qs_to_avoid_consecutive_repeating_characters;
 mod e1582_special_positions_in_a_binary_matrix;
 mod e1592_rearrange_spaces_between_words;
 mod e1598_crawler_log_folder;
@@ -18,6 +20,8 @@ mod e1636_sort_array_by_increasing_frequency;
 mod e1640_check_array_formation_through_concatenation;
 mod e1646_get_maximum_in_generated_array;
 mod e1652_defuse_the_bomb;
+mod e1656_design_an_ordered_stream;
+mod e1668_maximum_repeating_substring;
 mod e1672_richest_customer_wealth;
 mod e1678_goal_parser_interpretation;
 mod e1684_count_the_number_of_consistent_strings;
