@@ -1,1 +1,3 @@
+mod m1664_ways_to_make_a_fair_array;
+
 mod m1763_longest_nice_substring;
