@@ -46,3 +46,4 @@ mod e1790_check_if_one_string_swap_can_make_strings_equal;
 mod e1796_second_largest_digit_in_a_string;
 
 mod e1800_maximum_ascending_subarray_sum;
+mod e1805_number_of_different_integers_in_a_string;
