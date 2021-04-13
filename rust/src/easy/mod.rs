@@ -49,3 +49,4 @@ mod e1800_maximum_ascending_subarray_sum;
 mod e1805_number_of_different_integers_in_a_string;
 mod e1812_determine_color_of_a_chessboard_square;
 mod e1816_truncate_sentence;
+mod e1822_sign_of_the_product_of_an_array;
