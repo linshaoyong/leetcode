@@ -50,3 +50,5 @@ mod e1805_number_of_different_integers_in_a_string;
 mod e1812_determine_color_of_a_chessboard_square;
 mod e1816_truncate_sentence;
 mod e1822_sign_of_the_product_of_an_array;
+mod e1827_minimum_operations_to_make_the_array_increasing;
+mod e1832_check_if_the_sentence_is_pangram;

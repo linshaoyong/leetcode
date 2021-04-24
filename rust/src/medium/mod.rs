@@ -1,3 +1,5 @@
+mod m0547_number_of_provinces;
+
 mod m1551_minimum_operations_to_make_array_equal;
 
 mod m1664_ways_to_make_a_fair_array;
