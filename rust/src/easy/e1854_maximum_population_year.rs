@@ -1,8 +1,30 @@
+use std::collections::HashMap;
+
 struct Solution;
 
 impl Solution {
     pub fn maximum_population(logs: Vec<Vec<i32>>) -> i32 {
-        0
+        let mut map = HashMap::<i32, i32>::new();
+        for log in &logs {
+            for year in log[0]..log[1] {
+                *map.entry(year).or_insert(0) += 1;
+            }
+        }
+
+        let mut max_population = 0;
+        let mut min_year = logs[0][0];
+        for (year, population) in map.iter() {
+            if population > &max_population {
+                max_population = *population;
+                min_year = *year;
+            }
+            if population == &max_population {
+                if year < &min_year {
+                    min_year = *year;
+                }
+            }
+        }
+        min_year
     }
 }
 
