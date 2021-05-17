@@ -54,5 +54,7 @@ mod e1827_minimum_operations_to_make_the_array_increasing;
 mod e1832_check_if_the_sentence_is_pangram;
 mod e1837_sum_of_digits_in_base_k;
 mod e1844_replace_all_digits_with_characters;
+mod e1848_minimum_distance_to_the_target_element;
 mod e1854_maximum_population_year;
 mod e1859_sorting_the_sentence;
+mod e1863_sum_of_all_subset_xor_totals;

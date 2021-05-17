@@ -6,4 +6,5 @@ mod m1551_minimum_operations_to_make_array_equal;
 
 mod m1664_ways_to_make_a_fair_array;
 
+mod m1760_minimum_limit_of_balls_in_a_bag;
 mod m1763_longest_nice_substring;
