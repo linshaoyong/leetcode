@@ -3,7 +3,7 @@ struct Solution;
 impl Solution {
     pub fn ship_within_days(weights: Vec<i32>, days: i32) -> i32 {
         let mut low = weights.iter().max().unwrap().clone();
-        let mut high = weights.iter().fold(0, |a, b| a + b);
+        let mut high: i32 = weights.iter().sum();
 
         while low < high {
             let mid = (low + high) / 2;

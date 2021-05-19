@@ -1,1 +1,3 @@
+mod h0410_split_array_largest_sum;
+
 mod h1588_sum_of_all_odd_length_subarrays;
