@@ -2,7 +2,6 @@ mod m0547_number_of_provinces;
 mod m0875_koko_eating_bananas;
 
 mod m1011_capacity_to_ship_packages_within_d_days;
-mod m1201_ugly_number_iii;
 mod m1283_find_the_smallest_divisor_given_a_threshold;
 mod m1482_minimum_number_of_days_to_make_m_bouquets;
 
