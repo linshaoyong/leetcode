@@ -1,4 +1,5 @@
 mod m0547_number_of_provinces;
+mod m0875_koko_eating_bananas;
 
 mod m1011_capacity_to_ship_packages_within_d_days;
 
