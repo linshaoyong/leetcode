@@ -2,6 +2,7 @@ mod m0547_number_of_provinces;
 mod m0875_koko_eating_bananas;
 
 mod m1011_capacity_to_ship_packages_within_d_days;
+mod m1482_minimum_number_of_days_to_make_m_bouquets;
 
 mod m1551_minimum_operations_to_make_array_equal;
 
