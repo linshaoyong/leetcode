@@ -1,5 +1,6 @@
 mod m0454_4sum_ii;
 mod m0547_number_of_provinces;
+mod m0718_maximum_length_of_repeated_subarray;
 mod m0875_koko_eating_bananas;
 
 mod m1011_capacity_to_ship_packages_within_d_days;
