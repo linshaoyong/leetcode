@@ -58,3 +58,4 @@ mod e1848_minimum_distance_to_the_target_element;
 mod e1854_maximum_population_year;
 mod e1859_sorting_the_sentence;
 mod e1863_sum_of_all_subset_xor_totals;
+mod e1869_longer_contiguous_segments_of_ones_than_zeros;
