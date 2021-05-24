@@ -9,6 +9,7 @@ mod m1482_minimum_number_of_days_to_make_m_bouquets;
 
 mod m1551_minimum_operations_to_make_array_equal;
 
+mod m1642_furthest_building_you_can_reach;
 mod m1664_ways_to_make_a_fair_array;
 
 mod m1760_minimum_limit_of_balls_in_a_bag;
