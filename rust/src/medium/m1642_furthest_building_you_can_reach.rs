@@ -1,55 +1,28 @@
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
+
 struct Solution;
 
 impl Solution {
-    pub fn furthest_building(heights: Vec<i32>, bricks: i32, ladders: i32) -> i32 {
-        let mut prev = heights[0];
-
-        let mut distances = &mut vec![];
-        for height in &heights {
-            if height > &prev {
-                distances.push(height - prev);
-            } else {
-                distances.push(0);
+    pub fn furthest_building(heights: Vec<i32>, mut bricks: i32, ladders: i32) -> i32 {
+        let mut heap = BinaryHeap::new();
+        let mut mut_bricks = bricks;
+        for i in 0..heights.len() - 1 {
+            let mut d = heights[i + 1] - heights[i];
+            if d > 0 {
+                heap.push(Reverse(d));
             }
-            prev = *height;
-        }
-
-        let mut left = 0;
-        let mut right = heights.len() as i32 - 1;
-        while left < right {
-            let mid = left + (right + 1 - left) / 2;
-            if feasible(mid, distances, bricks, ladders) {
-                left = mid;
-            } else {
-                right = mid - 1;
+            if heap.len() as i32 > ladders {
+                if let Some(Reverse(v)) = heap.pop() {
+                    mut_bricks -= v;
+                }
+            }
+            if mut_bricks < 0 {
+                return i as i32;
             }
         }
-        left
+        heights.len() as i32 - 1
     }
-}
-
-fn feasible(m: i32, distances: &mut Vec<i32>, bricks: i32, ladders: i32) -> bool {
-    let mut sd = &mut distances[..m as usize + 1];
-    let mut mut_bricks = bricks.clone();
-    let mut mut_ladders = ladders.clone();
-    sd.sort();
-
-    let mut indexes = -1 as i32;
-    for distance in sd {
-        if mut_bricks >= *distance {
-            mut_bricks -= *distance;
-            indexes += 1;
-        } else {
-            if mut_ladders > 0 {
-                mut_ladders -= 1;
-                indexes += 1;
-            }
-        }
-        if indexes >= m {
-            return true;
-        }
-    }
-    false
 }
 
 #[test]
