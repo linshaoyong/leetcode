@@ -61,4 +61,5 @@ mod e1863_sum_of_all_subset_xor_totals;
 mod e1869_longer_contiguous_segments_of_ones_than_zeros;
 mod e1876_substrings_of_size_three_with_distinct_characters;
 
+mod e2315_count_asterisks;
 mod e2351_first_letter_to_appear_twice;
